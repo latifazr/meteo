@@ -1,0 +1,13 @@
+input{
+    width: 30%;
+    height: 30px;
+    
+}
+
+.page{
+    background-image: url(./../../assets/image1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 300vh;
+}

@@ -1,0 +1,36 @@
+
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col" style=" height: 300px;">
+      <div class="weather">
+        <div class="current">
+            <div>
+            <div>&nbsp;</div>
+            <div><input type="text" [(ngModel)]="b" class="titre"></div>
+            <div *ngIf="users1">
+                <p>{{users1[0].dt_txt}}</p>
+                <img src="http://openweathermap.org/img/w/{{users1[0].weather[0].icon}}.png"><br>
+                <p>{{users1[0].weather[0].description}}</p>
+                <p>{{users1[0].main.temp.toFixed(2)}}&deg;</p>
+            </div>
+            <div>&nbsp;</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col" *ngFor="let user1 of users1"
+              style="background-color: white;text-align: center;padding:20px ;">
+              <p class="day">{{user1.dt_txt}}</p>
+              <img src="http://openweathermap.org/img/w/{{user1.weather[0].icon}}.png"><br>
+              <p>{{user1.weather[0].description}}</p>
+              <p>{{user1.main.temp.toFixed(2)}}&deg;</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
